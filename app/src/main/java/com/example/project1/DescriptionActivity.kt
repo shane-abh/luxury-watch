@@ -99,6 +99,8 @@ class DescriptionActivity : AppCompatActivity() {
                 waterResistance = product.waterResistance
             )
 
+            Log.i("Debug", cartItem.name)
+
             // Get the current user
 
             val user: FirebaseUser? = auth.currentUser
@@ -117,7 +119,7 @@ class DescriptionActivity : AppCompatActivity() {
                         var isProductFoundInCart=false
                         // Check if product already available in cart
                         for (cartItem in currentUser.cart) {
-                            if (cartItem.name == product.name) {
+                            if (cartItem?.name == product?.name) {
                                 // Update the quantity of the prior product added in cart
                                 cartItem.quantity += 1
                                 isProductFoundInCart = true
