@@ -149,7 +149,7 @@ class DescriptionActivity : AppCompatActivity() {
                                 showToast("Failed to update user's cart. ${e.message}")
                             }
                     } else {
-                        showToast("User object is null")
+                        showToast("No User Found! Please login to add cart.")
                     }
                 }.addOnFailureListener { e ->
                     showToast("Failed to retrieve user details. ${e.message}")

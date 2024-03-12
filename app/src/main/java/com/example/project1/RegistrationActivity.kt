@@ -85,7 +85,7 @@ class RegistrationActivity : AppCompatActivity() {
                     val userRef = FirebaseDatabase.getInstance().reference.child("users").child(user?.uid ?: "")
                     userRef.setValue(userDetails)
                         .addOnSuccessListener {
-                            showToast("Registration successful! Please login to continue")
+                            showToast("Registration successful! Thank You")
                             navigateToLoginActivity()
                         }
                         .addOnFailureListener { e ->
