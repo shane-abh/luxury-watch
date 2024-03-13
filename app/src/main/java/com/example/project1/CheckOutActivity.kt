@@ -77,7 +77,7 @@ class CheckOutActivity : AppCompatActivity() {
 
     fun orderSummary() {
         val intent = intent
-        subtotal?.text = intent.getStringExtra("subTotal")
+        subtotal?.text = intent.getStringExtra("total")
         deliveryFee?.text = "$10.00"
         val totalCost = (intent.getStringExtra("total"))?.toDouble()?.plus(10)
         total?.text = totalCost.toString()

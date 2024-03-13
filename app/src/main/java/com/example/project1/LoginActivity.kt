@@ -34,7 +34,7 @@ class LoginActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-        ;
+
 
         // Check if user already logged in
         val currentUser = auth.currentUser
@@ -64,7 +64,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
 
-//        Google
+//        Google sign in
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken("961480815572-op5knfdu53jh3alaoeardaj2um17cl82.apps.googleusercontent.com")
             .requestEmail()
